@@ -7,6 +7,7 @@ export default function Navbar() {
       <Link to="/Login" style={{margin: '5px'}}>Login</Link>
       <Link to="/Tasks" style={{margin: '5px'}}>Tasks</Link>
       <Link to="/People" style={{margin: '5px'}}>People</Link>
+      <Link to="/Admin" style={{margin: '5px'}}>Admin</Link>
     </>
   )
 }

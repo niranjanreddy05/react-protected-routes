@@ -3,12 +3,12 @@ import { createContext, useContext, useState } from "react"
 const authContext = createContext();
 
 export function AuthProvider({ children }) {
-  const [isAuthed, setAuth] = useState(false);
-  const login = () => {
-    setAuth(true);
+  const [isAuthed, setAuth] = useState({isLoggedIn: false, roles:[]});
+  const login = (role = []) => {
+    setAuth(curObj => {return {...curObj, isLoggedIn: true, roles: role }});
   }
   const logout = () => {
-    setAuth(false);
+    setAuth(curObj => {return {...curObj, isLoggedIn: false, roles: []}});
   }
   return (
     <>
